@@ -1,13 +1,15 @@
-#include "SnakeGame.h"
+#include <SnakeGame.h>
 #include <LibGUI/GFontDatabase.h>
 #include <LibGUI/GPainter.h>
 #include <LibDraw/GraphicsBitmap.h>
 #include <stdlib.h>
 #include <time.h>
+#include <iostream>
 
 SnakeGame::SnakeGame(GWidget* parent)
     : GWidget(parent)
 {
+        //font setups and graphics
     set_font(GFontDatabase::the().get_by_name("Liza Regular"));
     m_fruit_bitmaps.append(*GraphicsBitmap::load_from_file("/res/icons/snake/paprika.png"));
     m_fruit_bitmaps.append(*GraphicsBitmap::load_from_file("/res/icons/snake/eggplant.png"));
